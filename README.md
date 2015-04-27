@@ -45,8 +45,7 @@ Wait until you see `Tomcat started.` in the log output.
     username: system
     password: oracle
 
-**Password for SYS & SYSTEM:**
-```oracle```
+**Password for SYS & SYSTEM:** ```oracle```
 
 **ECMSDK schema owner and password:** ```ECMSDK/ECMSDK```
 
