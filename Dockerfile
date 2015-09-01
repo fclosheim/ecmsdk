@@ -62,7 +62,7 @@ ENV PATH $CATALINA_HOME/bin:$PATH
 RUN echo 'export CATALINA_HOME=/u01/app/tomcat' >> /etc/bash.bashrc; \
     echo 'export PATH=$CATALINA_HOME/bin:$PATH' >> /etc/bash.bashrc
 RUN mkdir -p "$CATALINA_HOME"
-ENV TOMCAT_MINOR_VERSION 8.0.20
+ENV TOMCAT_MINOR_VERSION 8.0.24
 RUN apt-get update
 RUN apt-get install -y curl
 RUN curl -O http://archive.apache.org/dist/tomcat/tomcat-8/v${TOMCAT_MINOR_VERSION}/bin/apache-tomcat-${TOMCAT_MINOR_VERSION}.tar.gz && \
@@ -83,7 +83,7 @@ EXPOSE 8080
 # ECMSDK Installation
 ADD ecmsdk-xe.tar.gz /u01/app/oracle/product
 RUN chown -R oracle:dba /u01/app/oracle/product/ecmsdk
-RUN chmod u+x /u01/app/oracle/product/ecmsdk/bin/*.sh && \
+RUN chmod u+x /u01/app/oracle/product/ecmsdk/bin/ecmsdk && \
     chmod u+x /u01/app/oracle/product/ecmsdk/install/*.sh
 RUN echo 'export ECMSDK_HOME=/u01/app/oracle/product/ecmsdk' >> /etc/bash.bashrc
 ENV ECMSDK_HOME /u01/app/oracle/product/ecmsdk

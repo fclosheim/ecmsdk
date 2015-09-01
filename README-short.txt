@@ -1,1 +1,1 @@
-ECMSDK is a modern, mature robust and flexible open source Java API for building demanding content management-based applications.
+ECMSDK is a flexible open source Java API for building demanding content-centric database solutions.
