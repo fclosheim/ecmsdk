@@ -62,7 +62,7 @@ ENV PATH $CATALINA_HOME/bin:$PATH
 RUN echo 'export CATALINA_HOME=/u01/app/tomcat' >> /etc/bash.bashrc; \
     echo 'export PATH=$CATALINA_HOME/bin:$PATH' >> /etc/bash.bashrc
 RUN mkdir -p "$CATALINA_HOME"
-ENV TOMCAT_MINOR_VERSION 8.0.24
+ENV TOMCAT_MINOR_VERSION 8.0.33
 RUN apt-get update
 RUN apt-get install -y curl
 RUN curl -O http://archive.apache.org/dist/tomcat/tomcat-8/v${TOMCAT_MINOR_VERSION}/bin/apache-tomcat-${TOMCAT_MINOR_VERSION}.tar.gz && \
@@ -87,6 +87,7 @@ RUN chmod u+x /u01/app/oracle/product/ecmsdk/bin/ecmsdk && \
     chmod u+x /u01/app/oracle/product/ecmsdk/install/*.sh
 RUN echo 'export ECMSDK_HOME=/u01/app/oracle/product/ecmsdk' >> /etc/bash.bashrc
 ENV ECMSDK_HOME /u01/app/oracle/product/ecmsdk
+RUN cp $ORACLE_HOME/jdbc/lib/ojdbc6.jar $ECMSDK_HOME/lib/ojdbc6.jar
 RUN cp $ECMSDK_HOME/lib/*.jar $CATALINA_HOME/lib/
 RUN /u01/app/oracle/product/ecmsdk/install/init_repos.sh
 COPY ecmsdk.war $CATALINA_HOME/webapps/

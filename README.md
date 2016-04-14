@@ -1,6 +1,6 @@
 # What is ECMSDK ?
 
-Enterprise Content Management SDK (ECMSDK) is an open source, modern, mature, robust and flexible runtime and development platform for building demanding content management applications. The features and capabilities of EMCSDK are designed to help developers bring enterprise-scalable content management-based applications to market faster and better than with any other platform. ECMSDK provides a set of Java APIs that developers can use to customize or extend the product’s core functionality in numerous ways to build comprehensive content-centric database solutions.
+Enterprise Content Management SDK (ECMSDK) is an open source, modern, mature, robust and flexible runtime and development platform for building demanding information management applications. The features and capabilities of EMCSDK are designed to help developers bring enterprise-scalable information management-based applications to market faster and better than with any other platform. ECMSDK provides a set of Java APIs that developers can use to customize or extend the product’s core functionality in numerous ways to build comprehensive content-centric database solutions.
 
 > Detailed info on [ecmsdk.com](http://www.ecmsdk.com)
 
